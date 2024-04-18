@@ -1,0 +1,19 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "projet restaurant oh my food",
+  "main": "index.js",
+  "scripts": {
+    "sass": "npx sass --watch ./sass/style.scss:./assets/style.css"
+  },
+  "keywords": [
+    "javaScript",
+    "node",
+    "js"
+  ],
+  "author": "noah franche",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.74.1"
+  }
+}

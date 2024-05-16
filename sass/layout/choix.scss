@@ -1,0 +1,36 @@
+.choix {
+    padding: 3rem 2rem;
+    }
+    .button__princ {
+        font-weight: 500;
+        font-size: 16px;
+        height: 72px;
+        border-radius: 20px;
+        border-style: none;
+        background-color: $color-button;
+        @include button-main;
+        & i {
+             margin-right: 7%;
+        }    
+        &:hover {
+            background: lighten($color-button, 5%);
+            transition: transform 5s;
+            box-shadow: 0px 0px 6px 0px #696969;      
+        }
+    }       
+    .store {
+        color: $color-primary;
+    }
+       
+    .button__numero {
+        border-style: none;
+        font-size: 16px;
+        font-weight: 500;
+        width: 24px;
+        height: 24px;
+        border-radius: 24px;
+        position: relative;
+        transform: translateX(50%);
+        background-color: $color-primary;
+        color: white;
+    }    

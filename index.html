@@ -3,12 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/style.css">
-    <title>Oh-my-food</title>
+    <title>Oh my food</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,400&family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="https://kit.fontawesome.com/e836b46b7e.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div>
-        <img src="./assets/images/logo/ohmyfood.png" alt="Oh my food">
-    </div>
-</body>
-</html>
+    
+    <header class="header">
+        <img src="./assets/images/logo/ohmyfood.png" alt="logo de Ohmyfood" class="header__logo">
+        <div class="header__ensemble">
+            <button class="header__ensemble--button">
+                <i class="fa-solid fa-location-dot"></i>
+            </button>
+            <input class="header__ensemble--input" type="search" id="ville" value="Paris, Belleville">
+        </div>
+            
+    </header>
+
+    <section class="intro">
+        <h1 class="intro__title--1">Réservez le menu qui vous convient</h1>
+        <h2 class="intro__title--2">Découvrez des restaurants d'exception sélectionnés par nos soins</h2>
+        <button class="intro__button">Explorer nos restaurants</button>
+    </section>
+
+    <section class="choix">
+        <h1 class="choix__title--1">Fonctionnement</h1>
+        <div class="choix__button">
+            <button class="button__numero">1</button>
+            <button class="button__princ">
+                Choisissez un restaurant
+            </button>
+            <button class="button__numero">2</button>
+            <button class="button__princ">
+                Composez votre menu
+            </button>
+            <button class="button__numero">3</button>
+            <button class="button__princ">
+                Dégustez au restaurant
+            </button>
+            
+        </div>
+    </section>
+
+    <section class="">
+        <h1 class="menus__title--h1">Restaurants</h1>
+        <div class="menus__carte">
+            <a href="./restaurants/menu-la-palette-du-gout.html" class="carte">
+                <div class="carte__ensemble">               
+                    <img class="carte--img" src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Image du plat intitulé la palette du goût">
+                </div>
+                <div class="carte__text">
+                    <h2 class="carte__text--2">La palette du goût</h2>
+                    <h3 class="carte__text--3">Ménilmontant</h3>
+                </div>   
+            </a>
+                
+            <a href="./restaurants/menu-la-note-enchantee.html" class="carte">
+                <div class="carte__ensemble">         
+                    <img class="carte--img" src="./assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Image du plat intitulé la note enchantée">
+                </div>
+                <div class="carte__text">
+                    <h2 class="carte__text--2">La note enchantée</h2>
+                    <h3 class="carte__text--3">Charonne</h3>
+                </div>   
+            </a> 
+
+            <a href="./restaurants/menu-a-la-francaise.html" class="carte__3">
+                <div class="carte__ensemble">
+                    <img class="carte--img" src="./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Image du plat intitulé à la française">
+                </div>
+                <div class="carte__text">
+                    <h2 class="carte__text--2">À la française</h2>
+                    <h3 class="carte__text--3">Cité Rouge</h3>
+                </div>   
+            </a>
+
+            <a href="./restaurants/menu-le-delice-des-sens.html" class="carte__4">
+                <div class="carte__ensemble">
+                    <img class="carte--img" src="./assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Image du plat intitulé le délice des sens">
+                </div>
+                <div class="carte__text">
+                    <h2 class="carte__text--2">Le délice des sens</h2>
+                    <h3 class="carte__text--3">Folie-Méricourt</h3>
+                </div> 
+            </a>
+        </div>    
+    </section>
+
+    <footer>
+
+    </footer>

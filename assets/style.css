@@ -1,3 +1,77 @@
+@keyframes HeartBeat {
+  0% {
+    transform: scale(1);
+  }
+  15% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1.2);
+  }
+  25% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  55% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(1.2);
+  }
+  85% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes isLoading {
+  0% {
+    opacity: 1;
+    backdrop-filter: blur(10px);
+  }
+  90% {
+    opacity: 1;
+    backdrop-filter: blur(10px);
+  }
+  100% {
+    opacity: 0;
+    backdrop-filter: blur(0px);
+    z-index: -1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .header__menu {
   position: relative;
   width: auto;
@@ -148,6 +222,103 @@
   width: 1em;
 }
 
+.loader__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  background-color: whitesmoke;
+  z-index: 1000;
+  top: 0%;
+  left: 0%;
+  animation: isLoading 4s forwards;
+}
+
+.loader__container .loader {
+  width: 60px;
+  height: 60px;
+  background-image: url("/assets/icons/heart-icon-gradient.svg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  animation: HeartBeat 2s infinite linear;
+}
+
+@keyframes HeartBeat {
+  0% {
+    transform: scale(1);
+  }
+  15% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1.2);
+  }
+  25% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  55% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(1.2);
+  }
+  85% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes isLoading {
+  0% {
+    opacity: 1;
+    backdrop-filter: blur(10px);
+  }
+  90% {
+    opacity: 1;
+    backdrop-filter: blur(10px);
+  }
+  100% {
+    opacity: 0;
+    backdrop-filter: blur(0px);
+    z-index: -1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .heart-icon {
   display: block;
   background-image: url("/assets/icons/heart-icon.svg");
@@ -162,7 +333,7 @@
   top: 0;
   left: 0;
   display: block;
-  background-image: url("../assets/images/icons/heart-icon-gradient.svg");
+  background-image: url("/assets/icons/heart-icon-gradient.svg");
   background-repeat: no-repeat;
   height: 21px;
   width: 21px;
@@ -259,7 +430,7 @@
   justify-content: center;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   .about__section {
     padding: 2%;
     align-items: center;
@@ -276,26 +447,26 @@
   }
 }
 .about__section__container {
-  width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
-  padding-left: 5vw;
-  margin-top: 2em;
-  gap: 3em;
-  flex-wrap: nowrap;
+  align-items: flex-start;
+  width: 90%;
+  flex-wrap: wrap;
+  padding-left: 0;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   .about__section__container {
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: flex-start;
-    align-items: flex-start;
-    width: 90%;
-    flex-wrap: wrap;
-    padding-left: 0;
+    align-items: center;
+    padding-left: 5vw;
+    margin-top: 2em;
+    gap: 3em;
+    flex-wrap: nowrap;
   }
 }
 @media screen and (min-width: 768px) {
@@ -320,11 +491,10 @@
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
 }
 
-@media screen and (max-width: 768px) {
-  .about__section__container--items {
-    width: 85%;
-  }
+.about__section__container--items {
+  width: 85%;
 }
+
 @media screen and (min-width: 768px) {
   .about__section__container--items {
     gap: 1em;
@@ -347,11 +517,10 @@
   text-wrap: nowrap;
 }
 
-@media screen and (max-width: 768px) {
-  .about__section__container--items h3 {
-    font-size: 1em;
-  }
+.about__section__container--items h3 {
+  font-size: 1em;
 }
+
 @media screen and (min-width: 768px) {
   .about__section__container--items h3 {
     font-size: 0.8em;

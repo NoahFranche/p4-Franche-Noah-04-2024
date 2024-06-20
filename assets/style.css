@@ -239,7 +239,7 @@
 .loader__container .loader {
   width: 60px;
   height: 60px;
-  background-image: url("/assets/icons/heart-icon-gradient.svg");
+  background-image: url("../assets/images/icons/heart-icon-gradient.svg");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   animation: HeartBeat 2s infinite linear;
@@ -321,7 +321,7 @@
 }
 .heart-icon {
   display: block;
-  background-image: url("/assets/icons/heart-icon.svg");
+  background-image: url("../assets/images/icons/heart-icon.svg");
   background-repeat: no-repeat;
   height: 21px;
   width: 21px;
@@ -333,7 +333,7 @@
   top: 0;
   left: 0;
   display: block;
-  background-image: url("/assets/icons/heart-icon-gradient.svg");
+  background-image: url("../assets/images/icons/heart-icon-gradient.svg");
   background-repeat: no-repeat;
   height: 21px;
   width: 21px;
@@ -359,9 +359,9 @@
   font-size: 1.5em;
 }
 
-.heart-container:hover .heart-icon,
-.heart-container-menu:hover .heart-icon {
-  animation: fadeOut 0.3s forwards;
+.heart-container:hover .heart-icon-active,
+.heart-container-menu:hover .heart-icon-active {
+  animation: fadeIn 0.3s forwards;
 }
 
 .heart-container:hover .heart-icon-active,
@@ -441,7 +441,7 @@
   padding-left: 5vw;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   .about__section__title {
     width: 90%;
   }
@@ -454,6 +454,7 @@
   width: 90%;
   flex-wrap: wrap;
   padding-left: 0;
+  gap: 20px;
 }
 
 @media screen and (min-width: 768px) {
@@ -558,7 +559,7 @@
   padding: 0;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   .about__section__container--items img {
     width: clamp(1em, 2vw, 1.5em);
   }
@@ -589,7 +590,7 @@
   justify-content: center;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   .restaurants__section {
     padding: 2%;
     align-items: center;
@@ -600,7 +601,7 @@
   padding-left: 5vw;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   .restaurants__section__title {
     width: 90%;
   }
@@ -608,18 +609,17 @@
 .restaurants__section__container {
   width: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   padding-left: 5vw;
   padding-right: 5vw;
   gap: 3em;
   margin-top: 2em;
-  flex-wrap: wrap;
   list-style: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   .restaurants__section__container {
     display: flex;
     flex-direction: column;
@@ -631,13 +631,13 @@
 .restaurants__section__container--card {
   position: relative;
   height: auto;
-  width: 45%;
+  width: 85%;
   border-radius: 15px;
   background-color: white;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   .restaurants__section__container--card {
     width: 85%;
   }
@@ -718,9 +718,10 @@
   background-color: #f6f6f6;
   margin-top: -5vh;
   margin-inline: auto;
+  padding-left: 0;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   .menu__main .menu__section {
     width: 97vw;
     padding: 5% 0.5em;
@@ -765,7 +766,7 @@
   text-wrap: nowrap;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   .menu__main .menu__section__heading--title {
     font-size: 2em;
   }
@@ -803,7 +804,7 @@
   padding-right: 1em;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   .menu__main .menu__section__content__item {
     width: 93%;
   }
@@ -837,7 +838,7 @@
   align-items: center;
   background-color: white;
   border-radius: 20px;
-  width: auto;
+  width: 47%;
   height: fit-content;
   box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1019607843);
 }
@@ -867,7 +868,7 @@
 }
 
 .menu__main .menu__section__content__item__dish__container__item .price-container {
-  width: 25%;
+  width: 35%;
   height: 100%;
   display: flex;
   justify-content: flex-end;
